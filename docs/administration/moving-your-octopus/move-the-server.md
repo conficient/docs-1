@@ -71,7 +71,9 @@ Octopus.Server.exe show-thumbprint
 
 Our Polling Tentacles use a static address for their connection to the Octopus Server. If your server has moved and your static address/URL has changed, you will need to run the following [Tentacle.exe](https://octopus.com/docs/api-and-integration/tentacle.exe-command-line/register-with) command to update the Tentacle's `--server` value.
 
-`Tentacle.exe register-with --instance "Tentacle" --server "http://YOUR_OCTOPUS" --name "YOUR_TENTACLE_NAME" --apiKey "API-YOUR_API_KEY" --comms-style "TentacleActive" --server-comms-port "10943" --force --environment "YOUR_TENTACLE_ENVIRONMENTS" --role "YOUR_TENTACLE_ROLES" --console`
+```
+Tentacle.exe register-with --instance "Tentacle" --server "http://YOUR_OCTOPUS" --name "YOUR_TENTACLE_NAME" --apiKey "API-YOUR_API_KEY" --comms-style "TentacleActive" --server-comms-port "10943" --force --environment "YOUR_TENTACLE_ENVIRONMENTS" --role "YOUR_TENTACLE_ROLES" --console
+```
 
 :::warning
 If you are running your Tentacle.exe commands from a Powershell remote session, make sure to add --console at the end of each command to force Tentacle.exe not to run as a service.
